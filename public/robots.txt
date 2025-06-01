@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://toolkit-box.pages.dev
+
+# Sitemaps
+Sitemap: https://toolkit-box.pages.dev/sitemap.xml
