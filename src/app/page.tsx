@@ -8,7 +8,7 @@ export default function Home() {
             <div>
                 <h2>All Tools</h2>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
                 {links.map((link) => (
                     <Link key={link.href} href={link.href}>
                         <Card

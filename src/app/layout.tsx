@@ -36,7 +36,7 @@ export default function RootLayout({
                         </Link>
                     </div>
                 </header>
-                <main className="px-14 py-6">{children}</main>
+                <main className="px-2 sm:px-14 py-6">{children}</main>
             </body>
         </html>
     );

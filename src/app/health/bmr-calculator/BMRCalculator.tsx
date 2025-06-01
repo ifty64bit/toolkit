@@ -1,6 +1,7 @@
 "use client";
-import { Badge } from "@/components/ui/badge";
+
 import { Input } from "@/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
     Select,
     SelectContent,
@@ -10,50 +11,76 @@ import {
 } from "@/components/ui/select";
 import { useState } from "react";
 
-function getBMICategory(bmi: number) {
-    if (bmi < 18.5) return "Underweight";
-    if (bmi < 25) return "Normal weight";
-    if (bmi < 30) return "Overweight";
-    return "Obese";
-}
-
-function calculateBMI(
-    height: number,
-    weight: number,
-    heightUnit: "cm" | "m",
-    weightUnit: "kg" | "gm"
+function calculateBMR(
+    gender: "male" | "female",
+    weight: string,
+    height: string,
+    age: string
 ) {
-    if (heightUnit === "m") height *= 100; // Convert meters to centimeters
-    if (weightUnit === "gm") weight /= 1000; // Convert grams to kilograms
+    const w = parseFloat(weight);
+    const h = parseFloat(height);
+    const a = parseInt(age);
 
-    const heightInMeters = height / 100; // Convert centimeters to meters
-    return weight / (heightInMeters * heightInMeters);
+    if (!gender || isNaN(w) || isNaN(h) || isNaN(a)) {
+        return 0;
+    }
+
+    const result =
+        gender === "male"
+            ? 10 * w + 6.25 * h - 5 * a + 5
+            : 10 * w + 6.25 * h - 5 * a - 161;
+    return Math.round(result);
 }
 
-function BMICalculator() {
+function BMRCalculator() {
+    const [gender, setGender] = useState<"male" | "female">("male");
+    const [age, setAge] = useState<string>("");
     const [height, setHeight] = useState<{ unit: "cm" | "m"; value: string }>({
         unit: "cm",
         value: "",
     });
-
     const [weight, setWeight] = useState<{ unit: "kg" | "gm"; value: string }>({
         unit: "kg",
         value: "",
     });
 
-    const BMI =
-        height.value && weight.value
-            ? calculateBMI(
-                  parseFloat(height.value),
-                  parseFloat(weight.value),
-                  height.unit,
-                  weight.unit
-              )
-            : null;
+    const BMR = calculateBMR(gender, weight.value, height.value, age);
+
     return (
         <div className="flex gap-4 flex-col sm:flex-row ">
             <div className="flex gap-2 flex-col sm:w-1/2 bg-white p-6 rounded-lg shadow-md">
                 <h3>Enter your details</h3>
+                <div className="mb-4">
+                    <RadioGroup
+                        defaultValue={gender}
+                        onValueChange={(value) =>
+                            setGender(value as "male" | "female")
+                        }
+                        className="flex gap-4"
+                    >
+                        <div className="flex gap-2 items-center">
+                            <RadioGroupItem value="male" id="male" />
+                            <label htmlFor="male">Male</label>
+                        </div>
+                        <div className="flex gap-2 items-center">
+                            <RadioGroupItem value="female" id="female" />
+                            <label htmlFor="female">Female</label>
+                        </div>
+                    </RadioGroup>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="age">Age</label>
+                    <Input
+                        type="number"
+                        id="age"
+                        placeholder="Enter age"
+                        value={age}
+                        onChange={(e) => setAge(e.target.value)}
+                        className="max-w-28"
+                    />
+                </div>
+
                 <div className="flex flex-col gap-2">
                     <label htmlFor="height">Height</label>
                     <div className="flex flex-col sm:flex-row gap-2">
@@ -131,42 +158,40 @@ function BMICalculator() {
                 </div>
             </div>
             <div className="sm:w-1/2 bg-white p-6 rounded-lg shadow-md">
-                <div className="flex flex-col gap-4">
-                    <h3>Your BMI</h3>
-                    {BMI ? (
-                        <>
-                            <p className="text-2xl font-bold">
-                                {BMI.toFixed(2)}
+                <div className="flex flex-col gap-4 justify-between h-full">
+                    <div>
+                        <h3>Your BMR</h3>
+                        {BMR ? (
+                            <>
+                                <p className="text-2xl font-bold">
+                                    {BMR} cal/day
+                                </p>
+                            </>
+                        ) : (
+                            <p className="text-muted-foreground">
+                                Please enter your height and weight to calculate
+                                your BMR.
                             </p>
-                            <h3>CATEGORY</h3>
-                            <Badge
-                                variant={
-                                    getBMICategory(BMI) === "Obese"
-                                        ? "destructive"
-                                        : getBMICategory(BMI) === "Overweight"
-                                        ? "warning"
-                                        : getBMICategory(BMI) ===
-                                          "Normal weight"
-                                        ? "success"
-                                        : getBMICategory(BMI) === "Underweight"
-                                        ? "warning"
-                                        : "default"
-                                }
-                                className="px-2 py-1 text-base"
-                            >
-                                {getBMICategory(BMI)}
-                            </Badge>
-                        </>
-                    ) : (
-                        <p className="text-muted-foreground">
-                            Please enter your height and weight to calculate
-                            your BMI.
+                        )}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                        <p>
+                            Your Basal Metabolic Rate (BMR) is the number of
+                            calories your body needs to maintain basic
+                            physiological functions at rest. This value can help
+                            you understand your daily caloric needs for weight
+                            management.
                         </p>
-                    )}
+                        <p>
+                            Note: The BMR calculation is based on the Mifflin-St
+                            Jeor Equation, which is widely used for estimating
+                            BMR.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     );
 }
 
-export default BMICalculator;
+export default BMRCalculator;
