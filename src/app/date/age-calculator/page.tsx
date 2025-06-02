@@ -1,4 +1,12 @@
+import { type Metadata } from "next";
 import AgeCalculator from "./AgeCalculator";
+
+export const metadata: Metadata = {
+    title: "Age Calculator",
+    description:
+        "Calculate your age in years, months, and days, including total days, hours, and minutes.",
+    keywords: ["age", "calculator", "years", "months", "days"],
+};
 
 function AgeCalculatorPage() {
     return (

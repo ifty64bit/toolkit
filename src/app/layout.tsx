@@ -11,6 +11,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "ToolKit - Your Ultimate Utility Suite",
     description: "Essential tools for everyday life",
+    keywords: ["toolkit", "utilities", "productivity", "tools", "life hacks"],
+    verification: {
+        google: "hwCWQ7ip2HL7AoqJKUWqCvfeCSkQnJWmsCB6RXE0zLs",
+    },
 };
 
 export default function RootLayout({
