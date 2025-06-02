@@ -133,8 +133,9 @@
     * {
         @apply border-border outline-ring/50;
     }
+
     body {
-        @apply bg-background text-foreground;
+        @apply text-foreground bg-gradient-to-br from-slate-50 to-slate-100;
     }
 
     h1 {

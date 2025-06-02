@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistMono.variable} antialiased`}>
+            <body className={`${geistMono.variable} antialiased min-h-dvh`}>
                 <header className="px-12 py-4 border-b bg-white">
                     <div>
                         <Link href="/" className="flex items-center gap-4">
