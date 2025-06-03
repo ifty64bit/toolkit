@@ -11,6 +11,7 @@ import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import advancedFormat from "dayjs/plugin/advancedFormat";
 import { Clock } from "lucide-react";
+import { getZodiacSign } from "../../../lib/functions";
 
 dayjs.extend(duration);
 dayjs.extend(advancedFormat);
@@ -35,8 +36,17 @@ function getAge(birthday: { years: number; months: number; days: number }) {
     const totalDays = today.diff(birthDate, "day");
     const totalHours = today.diff(birthDate, "hour");
     const totalMinutes = today.diff(birthDate, "minute");
+    const zodiacSign = getZodiacSign(birthday.months, birthday.days);
 
-    return { years, months, days, totalDays, totalHours, totalMinutes };
+    return {
+        years,
+        months,
+        days,
+        totalDays,
+        totalHours,
+        totalMinutes,
+        zodiacSign,
+    };
 }
 
 function AgeCalculator() {
@@ -188,6 +198,20 @@ function AgeCalculator() {
                                 {age?.days}
                             </div>
                             <div className="text-sm text-gray-600">Days</div>
+                        </div>
+                    </div>
+
+                    <div className="mt-6 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border border">
+                        <div className="text-center">
+                            <div className="text-4xl mb-2">
+                                {age?.zodiacSign.emoji}
+                            </div>
+                            <div className="text-xl font-semibold text-indigo-700 mb-1">
+                                {age?.zodiacSign.sign}
+                            </div>
+                            <div className="text-sm text-indigo-600">
+                                {age?.zodiacSign.dates}
+                            </div>
                         </div>
                     </div>
 
