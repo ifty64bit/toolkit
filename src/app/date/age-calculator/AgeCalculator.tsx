@@ -201,7 +201,7 @@ function AgeCalculator() {
                         </div>
                     </div>
 
-                    <div className="mt-6 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border border">
+                    <div className="mt-6 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border">
                         <div className="text-center">
                             <div className="text-4xl mb-2">
                                 {age?.zodiacSign.emoji}

@@ -27,6 +27,13 @@ const links: LinkType[] = [
         icon: "📅",
         href: "date/age-calculator",
     },
+    {
+        title: "Water Intake Calculator",
+        description: "Calculate your daily water intake",
+        tag: "Health",
+        icon: "💧",
+        href: "health/water-intake-calculator",
+    },
 ];
 
 export default links;

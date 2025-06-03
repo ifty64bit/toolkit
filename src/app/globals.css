@@ -60,6 +60,8 @@
     --primary-foreground: oklch(0.985 0 0);
     --secondary: oklch(0.967 0.001 286.375);
     --secondary-foreground: oklch(0.21 0.006 285.885);
+    --warning: oklch(98.7% 0.022 95.277);
+    --warning-foreground: oklch(47.3% 0.137 46.201);
     --muted: oklch(0.967 0.001 286.375);
     --muted-foreground: oklch(0.552 0.016 285.938);
     --accent: oklch(0.967 0.001 286.375);
@@ -68,8 +70,6 @@
     --success-foreground: oklch(
         0.42 0.25 142
     ); /* richer green text for contrast */
-    --warning: oklch(0.95 0.12 80); /* light amber/yellow background */
-    --warning-foreground: oklch(0.5 0.2 80); /* strong readable amber text */
     --destructive: oklch(0.96 0.12 27); /* soft light red background */
     --destructive-foreground: oklch(0.43 0.25 27); /* readable rich red text */
     --border: oklch(93% 0.034 272.788);
