@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: "ToolKit - Your Ultimate Utility Suite",
-    description: "Essential tools for everyday life",
+    description: "ToolKit-Box is a collection of essential tools designed to enhance your productivity and simplify everyday tasks. From calculators to converters, find everything you need in one place. Get started now!",
     keywords: ["toolkit", "utilities", "productivity", "tools", "life hacks"],
     verification: {
         google: "hwCWQ7ip2HL7AoqJKUWqCvfeCSkQnJWmsCB6RXE0zLs",
