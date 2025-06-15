@@ -9,12 +9,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "ToolKit - Your Ultimate Utility Suite",
-    description: "ToolKit-Box is a collection of essential tools designed to enhance your productivity and simplify everyday tasks. From calculators to converters, find everything you need in one place. Get started now!",
-    keywords: ["toolkit", "utilities", "productivity", "tools", "life hacks"],
-    verification: {
-        google: "hwCWQ7ip2HL7AoqJKUWqCvfeCSkQnJWmsCB6RXE0zLs",
-    },
+    title: "ToolDeck - Your Ultimate Utility Suite",
+    description:
+        "ToolDeck is a collection of essential tools designed to enhance your productivity and simplify everyday tasks. From calculators to converters, find everything you need in one place. Get started now!",
+    keywords: ["tooldeck", "utilities", "productivity", "tools", "life hacks"],
 };
 
 export default function RootLayout({
@@ -32,7 +30,7 @@ export default function RootLayout({
                                 T
                             </span>
                             <div>
-                                <h1 className="font-bold text-xl">ToolKit</h1>
+                                <h1 className="font-bold text-xl">ToolDeck</h1>
                                 <p className="text-sm text-muted-foreground">
                                     Essential tools for everyday life
                                 </p>
