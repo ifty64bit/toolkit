@@ -34,6 +34,13 @@ const links: LinkType[] = [
         icon: "💧",
         href: "health/water-intake-calculator",
     },
+    {
+        title: "Password Generator",
+        description: "Generate secure passwords",
+        tag: "Other",
+        icon: "🔒",
+        href: "security/password-generator",
+    },
 ];
 
 export default links;

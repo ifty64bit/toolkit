@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🧍‍♂️ Health & Fitness Tools
+Calorie Calculator
+→ Estimate daily calorie needs based on age, gender, weight, height, and activity level.
 
-## Getting Started
+BMR Calculator (Basal Metabolic Rate)
+→ Calculates calories your body needs at rest.
 
-First, run the development server:
+Body Fat Percentage Calculator
+→ Estimate based on measurements or Navy formula.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ideal Weight Calculator
+→ Suggests a healthy weight range for height and age.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Macro Nutrient Calculator
+→ Calculates daily protein, carb, and fat needs.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Water Intake Calculator
+→ Tells how much water you should drink per day.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📚 Education & Learning Tools
+GPA Calculator
+→ Enter course grades to calculate GPA.
 
-## Learn More
+Typing Speed Test
+→ Measures words per minute with accuracy.
 
-To learn more about Next.js, take a look at the following resources:
+Reading Time Estimator
+→ Enter text to estimate how long it will take to read.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+💸 Finance Tools
+Loan EMI Calculator
+→ Calculate monthly payments for personal/car/home loans.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Savings Goal Calculator
+→ Estimate how much you need to save each month.
 
-## Deploy on Vercel
+Currency Converter
+→ Real-time exchange rates for international users.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Income Tax Calculator (Region-Based)
+→ Estimate yearly tax owed based on income.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🛠️ Daily Utility Tools
+Age Calculator
+→ Enter birth date to get current age.
+
+Unit Converter
+→ Convert length, weight, temperature, etc.
+
+Percentage Calculator
+→ Calculate discounts, increases, etc.
+
+Date Difference Calculator
+→ Find days/weeks/months between two dates.
+
+QR Code Generator
+→ Convert URLs, text, or contact info into QR codes.
+
+📱 Tech Tools
+Password Strength Checker
+→ Analyze and score a password.
+
+JSON Formatter / Validator
+→ Beautify or validate JSON input.
+
+Base64 Encoder/Decoder
+→ Useful for developers.
+
+Color Picker / Contrast Checker

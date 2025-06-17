@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://toolkit-box.pages.dev
+Host: https://tooldeck.app
 
 # Sitemaps
-Sitemap: https://toolkit-box.pages.dev/sitemap.xml
+Sitemap: https://tooldeck.app/sitemap.xml
