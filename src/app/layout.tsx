@@ -18,9 +18,17 @@ export const metadata: Metadata = {
     description:
         "ToolDeck is a collection of essential tools designed to enhance your productivity and simplify everyday tasks. From calculators to converters, find everything you need in one place. Get started now!",
     keywords: ["tooldeck", "utilities", "productivity", "tools", "life hacks"],
+    openGraph: {
+        title: "ToolDeck - Your Ultimate Utility Suite",
+        description:
+            "ToolDeck is a collection of essential tools designed to enhance your productivity and simplify everyday tasks. From calculators to converters, find everything you need in one place. Get started now!",
+        url: "https://tooldeck.app",
+        siteName: "ToolDeck",
+        type: "website",
+    },
     alternates: {
         canonical: "./",
-    }
+    },
 };
 
 export default function RootLayout({

@@ -8,7 +8,7 @@ type Props = {
 };
 function Card({ title, description, tag, icon }: Props) {
     return (
-        <div className="max-w-72 min-h-36 h-full bg-white border rounded-xl flex gap-7 p-6 hover:shadow-md hover:bg-background/5 transition-shadow duration-200 ease-in-out">
+        <div className="w-full min-h-36 h-full bg-white border rounded-xl flex gap-7 p-6 hover:shadow-md hover:bg-background/5 transition-shadow duration-200 ease-in-out">
             <div className="w-8 text-3xl">{icon}</div>
             <div className="space-y-2">
                 <h2 className="font-semibold">{title}</h2>
