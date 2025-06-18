@@ -8,7 +8,7 @@ export default function Home() {
             <div>
                 <h2>All Tools</h2>
             </div>
-            <div className="grid gap-4 sm:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+            <div className="grid gap-4 sm:grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]">
                 {links.map((link) => (
                     <Link key={link.href} href={link.href} className="block">
                         <Card
