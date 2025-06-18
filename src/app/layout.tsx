@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
@@ -10,10 +10,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "ToolDeck - Your Ultimate Utility Suite",
+    metadataBase: new URL("https://tooldeck.app"),
+    title: {
+        default: "ToolDeck - Your Ultimate Utility Suite",
+        template: "%s | ToolDeck",
+    },
     description:
         "ToolDeck is a collection of essential tools designed to enhance your productivity and simplify everyday tasks. From calculators to converters, find everything you need in one place. Get started now!",
     keywords: ["tooldeck", "utilities", "productivity", "tools", "life hacks"],
+    alternates: {
+        canonical: "./",
+    }
 };
 
 export default function RootLayout({
