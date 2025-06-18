@@ -37,7 +37,7 @@ const links: LinkType[] = [
     {
         title: "Password Generator",
         description: "Generate secure passwords",
-        tag: "Other",
+        tag: "Security",
         icon: "🔒",
         href: "security/password-generator",
     },
@@ -48,7 +48,7 @@ export default links;
 export type LinkType = {
     title: string;
     description: string;
-    tag: "Health" | "Conversion" | "Date" | "Other";
+    tag: "Health" | "Conversion" | "Date" | "Security" | "Other";
     icon: string;
     href: string;
 };
