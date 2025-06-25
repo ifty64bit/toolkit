@@ -161,3 +161,25 @@
         @apply text-sm font-semibold;
     }
 }
+
+@layer components {
+    .tone-purple {
+        @apply bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-200 text-purple-800 [&_h4]:text-purple-900 [&_svg]:text-purple-600;
+    }
+
+    .tone-blue {
+        @apply bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border border-blue-200 text-blue-800 [&_h4]:text-blue-900 [&_svg]:text-blue-600;
+    }
+
+    .tone-green {
+        @apply bg-gradient-to-br from-green-50 to-lime-50 rounded-lg border border-green-200 text-green-800 [&_h4]:text-green-900 [&_svg]:text-green-600;
+    }
+
+    .tone-yellow {
+        @apply bg-gradient-to-br from-yellow-50 to-amber-50 rounded-lg border border-yellow-200 text-yellow-800 [&_h4]:text-yellow-900 [&_svg]:text-yellow-600;
+    }
+
+    .tone-orange {
+        @apply bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg border border-orange-200 text-orange-800 [&_h4]:text-orange-900 [&_svg]:text-orange-600;
+    }
+}

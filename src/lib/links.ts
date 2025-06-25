@@ -48,6 +48,13 @@ const links: LinkType[] = [
         icon: "🔍",
         href: "security/password-strength-checker",
     },
+    {
+        title: "Passphrase Generator",
+        description: "Generate secure passphrases",
+        tag: "Security",
+        icon: "🔑",
+        href: "security/passphrase-generator",
+    },
 ];
 
 export default links;
