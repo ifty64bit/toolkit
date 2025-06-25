@@ -2,6 +2,8 @@ import { type NextRequest, NextResponse } from "next/server";
 import commonWords from "an-array-of-english-words";
 import animals from "animals";
 
+export const runtime = "edge";
+
 const colors = [
     "red",
     "blue",
